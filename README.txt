@@ -39,6 +39,10 @@ Howto install
 
 Howto Submit GitHub
 -------------------
+0:
+create empty github repo with name: market-research
+and copy instruction (see 3:)
+
 1:
 ssh-keygen -t rsa -C "bruno.staub@intersolution.ch"
 
