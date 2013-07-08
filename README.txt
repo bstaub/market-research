@@ -37,3 +37,26 @@ Howto install
   node -e "var mr = require('./market-research.js'); mr.marketResearch();"
   node -e "var mr = require('./market-research.js'); mr.marketResearch([\"FB\",\"ORCL\"]);"
 
+Howto Submit GitHub
+-------------------
+1:
+ssh-keygen -t rsa -C "bruno.staub@intersolution.ch"
+
+2:
+copy output from public rsa key to github --> SSH Keys
+cat .ssh/id_rsa.pub 
+
+3:
+#optional start
+git config --global user.name "Bruno Staub"
+git config --global user.email bruno.staub@intersolution.ch
+git commit --amend --reset-author
+#optional end
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:bstaub/market-research.git
+#require public rsa key in github
+git push -u origin master
+#requre end
